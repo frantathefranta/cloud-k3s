@@ -63,6 +63,11 @@ tasks:
       - task: .template
       - task: sops:encrypt
       - task: .validate
+  refresh-template:
+    desc: Re-create yaml files from templates
+    prompt: Any conflicting config in the root kubernetes and ansible directories will be overwritten... continue?
+    cmds:
+      - task: .template
 
   .template:
     internal: true
