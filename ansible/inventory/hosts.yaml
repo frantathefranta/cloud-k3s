@@ -1,0 +1,23 @@
+---
+kubernetes:
+  children:
+    controllers:
+      hosts:
+        "k8-01":
+          ansible_user: "opc"
+          ansible_host: "10.0.0.235"
+          ansible_ssh_private_key_file: "~/.ssh/cloud_oci_key"
+        "k8-02":
+          ansible_user: "opc"
+          ansible_host: "10.0.0.33"
+          ansible_ssh_private_key_file: "~/.ssh/cloud_oci_key"
+        "k8-03":
+          ansible_user: "opc"
+          ansible_host: "10.0.0.17"
+          ansible_ssh_private_key_file: "~/.ssh/cloud_oci_key"
+    workers:
+      hosts:
+        "k8-04":
+          ansible_user: "opc"
+          ansible_host: "10.0.0.154"
+          ansible_ssh_private_key_file: "~/.ssh/cloud_oci_key"
