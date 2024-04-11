@@ -21,10 +21,10 @@
       block:
         - name: Packages | Install
           ansible.builtin.dnf:
-            name: ca-certificates,conntrack,curl,dirmngr,gdisk,gnupg,hdparm,htop,
+            name: ca-certificates,conntrack,curl,dirmngr,gdisk,gnupg,hdparm,
               iptables,iputils,ipvsadm,libseccomp,lm_sensors,net-tools,nfs-utils,
               nvme-cli,iscsi-initiator-utils,parted,psmisc,python3,python3-dnf,python3-yaml,
-              smartmontools,socat,software-properties-common,unzip,util-linux
+              smartmontools,socat,unzip,util-linux
 
     - name: Network Configuration
       notify: Reboot
